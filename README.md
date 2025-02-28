@@ -14,7 +14,7 @@ loader for shared objects.
 
 This library was made in mind with loading from statically linked binaries which is usually very
 hacky or even impossible depending on your libc implementation. Don't get me wrong this is still 
-a hackjob.
+a hack job.
 
 ## Limitations
 As mentioned before this targets -nostdlib shared objects for the x86_64 architecture only.
@@ -23,3 +23,6 @@ RELRO, shared object dependencies support isn't provided.
 ## Usage
 Drop the C files into your project and include mydlfcn.h and use the functions provided by it. :D
 
+One important thing to note, options.h has the preprocessor option to enable or disable mprotect 
+calls used to fix the memory protections in accordance with the library but some systems detect
+the change as suspecious so that can be disabled.

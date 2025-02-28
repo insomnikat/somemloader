@@ -18,7 +18,7 @@ a hack job.
 
 ## Limitations
 As mentioned before this targets -nostdlib shared objects for the x86_64 architecture only.
-RELRO, shared object dependencies support isn't provided.
+RELRO and shared object dependencies support isn't provided.
 
 ## Usage
 Drop the C files into your project and include mydlfcn.h and use the functions provided by it. :D
